@@ -26,6 +26,10 @@ const About = () => {
     }
   ];
 
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -48,12 +52,13 @@ const About = () => {
               </p>
               <p className="text-slate-300 leading-relaxed mb-6">
                 My approach combines technical precision with creative vision, ensuring every project 
-                delivers measurable value. I specialize in single-page applications, focusing on 
-                accessibility, scalability, and cutting-edge design principles.
+                delivers measurable value. I specialize in single-page applications, SEO optimization, 
+                and WordPress development, focusing on accessibility, scalability, and cutting-edge design principles.
               </p>
               <p className="text-slate-300 leading-relaxed">
-                When I'm not coding, I'm exploring new technologies, contributing to open-source projects, 
-                and finding innovative ways to solve complex problems through clean, efficient code.
+                As a continuous learner with a BSc in Computer Science and certifications from MIT and Udemy, 
+                I'm always exploring new technologies and finding innovative ways to solve complex problems 
+                through clean, efficient code. I excel in remote work environments and thrive in collaborative teams.
               </p>
             </div>
           </div>
@@ -77,12 +82,16 @@ const About = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-slate-700/30">
+          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-slate-700/30 backdrop-blur-sm">
             <h3 className="text-2xl font-bold text-white mb-4">Let's Build Something Amazing Together</h3>
             <p className="text-slate-300 mb-6">
               I'm always excited to collaborate on innovative projects that push the boundaries of web development.
+              Ready to work remotely and deliver exceptional results.
             </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1">
+            <button 
+              onClick={scrollToContact}
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1"
+            >
               Let's Connect
             </button>
           </div>

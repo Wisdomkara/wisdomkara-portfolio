@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ExternalLink, Github, Eye, Code, Heart, Brain, Calendar, Leaf, DollarSign, CheckSquare, Sparkles } from 'lucide-react';
+import { ExternalLink, Github, Eye, Code, Heart, Brain, Calendar, Leaf, DollarSign, CheckSquare, Sparkles, Activity } from 'lucide-react';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
@@ -8,6 +8,20 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: 'Healinton',
+      category: 'healthcare',
+      description: 'Very robust health application providing comprehensive healthcare solutions',
+      longDescription: 'A comprehensive health platform with advanced features for patient management, health tracking, and medical consultations.',
+      image: '/placeholder.svg',
+      tech: ['React', 'Node.js', 'Healthcare APIs', 'Real-time Data'],
+      features: ['Patient management', 'Health tracking', 'Medical consultations', 'Appointment scheduling'],
+      icon: <Activity className="h-8 w-8" />,
+      color: 'from-emerald-400 to-green-600',
+      github: '#',
+      demo: 'https://healinton.lovable.app'
+    },
+    {
+      id: 2,
       title: 'One Worship',
       category: 'healthcare',
       description: 'Comprehensive web application supporting individuals with emotional and mental health challenges',
@@ -21,7 +35,21 @@ const Projects = () => {
       demo: '#'
     },
     {
-      id: 2,
+      id: 3,
+      title: 'Chat Automation System',
+      category: 'automation',
+      description: 'Advanced chat automation system with 50% Supabase integration and CRM capabilities',
+      longDescription: 'Intelligent chat automation platform integrating Supabase backend with comprehensive CRM features for streamlined customer communication.',
+      image: '/placeholder.svg',
+      tech: ['React', 'Supabase', 'CRM Integration', 'AI Chat'],
+      features: ['Automated responses', 'CRM integration', 'Real-time analytics', 'Customer management'],
+      icon: <Brain className="h-8 w-8" />,
+      color: 'from-cyan-400 to-blue-600',
+      github: '#',
+      demo: '#'
+    },
+    {
+      id: 4,
       title: 'Inspiring',
       category: 'motivation',
       description: 'Motivational web platform delivering personalized daily inspirational content',
@@ -35,7 +63,7 @@ const Projects = () => {
       demo: '#'
     },
     {
-      id: 3,
+      id: 5,
       title: 'Grace Chapel Website',
       category: 'community',
       description: 'Fully responsive, animated church platform enhancing virtual community engagement',
@@ -49,7 +77,7 @@ const Projects = () => {
       demo: '#'
     },
     {
-      id: 4,
+      id: 6,
       title: 'EcoTracker',
       category: 'environment',
       description: 'Sustainability tracking application helping users monitor their carbon footprint',
@@ -63,7 +91,7 @@ const Projects = () => {
       demo: '#'
     },
     {
-      id: 5,
+      id: 7,
       title: 'FinanceFlow',
       category: 'finance',
       description: 'Intuitive financial planning tool with expense tracking and budget optimization',
@@ -77,7 +105,7 @@ const Projects = () => {
       demo: '#'
     },
     {
-      id: 6,
+      id: 8,
       title: 'TaskMaster Pro',
       category: 'productivity',
       description: 'Collaborative project management platform for teams and freelancers',
@@ -89,32 +117,18 @@ const Projects = () => {
       color: 'from-purple-400 to-violet-600',
       github: '#',
       demo: '#'
-    },
-    {
-      id: 7,
-      title: 'Kara Technologies Portfolio',
-      category: 'portfolio',
-      description: 'Experimental portfolio platform showcasing cutting-edge web development techniques',
-      longDescription: 'Personal development showcase with parallax effects, scroll-triggered animations, futuristic UI/UX, and interactive elements.',
-      image: '/placeholder.svg',
-      tech: ['React', 'GSAP', 'Three.js', 'Advanced CSS'],
-      features: ['Parallax effects', 'Scroll-triggered animations', 'Futuristic UI/UX', 'Interactive elements'],
-      icon: <Code className="h-8 w-8" />,
-      color: 'from-cyan-400 to-blue-600',
-      github: '#',
-      demo: '#'
     }
   ];
 
   const categories = [
     { id: 'all', label: 'All Projects' },
     { id: 'healthcare', label: 'Healthcare' },
+    { id: 'automation', label: 'Automation' },
     { id: 'motivation', label: 'Motivation' },
     { id: 'community', label: 'Community' },
     { id: 'environment', label: 'Environment' },
     { id: 'finance', label: 'Finance' },
-    { id: 'productivity', label: 'Productivity' },
-    { id: 'portfolio', label: 'Portfolio' }
+    { id: 'productivity', label: 'Productivity' }
   ];
 
   const filteredProjects = filter === 'all' 
@@ -174,6 +188,8 @@ const Projects = () => {
                   </a>
                   <a 
                     href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-2 bg-slate-900/80 rounded-lg text-slate-300 hover:text-white transition-colors opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0"
                   >
                     <ExternalLink className="h-4 w-4" />
@@ -218,10 +234,15 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <button className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2">
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2"
+                  >
                     <Eye className="h-4 w-4" />
-                    View Details
-                  </button>
+                    View Live
+                  </a>
                 </div>
               </div>
             </div>

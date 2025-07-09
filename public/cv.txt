@@ -1,0 +1,55 @@
+
+WISDOM KARA
+Front-end Developer & Creative Technologist
+
+CONTACT INFORMATION
+Email: wiskara1@gmail.com
+GitHub: https://github.com/Wisdomkara
+LinkedIn: https://www.linkedin.com/in/wisdom-kara-
+Portfolio: Your Portfolio URL
+
+EDUCATION
+Bachelor of Science in Computer Science
+Courage University
+
+CERTIFICATIONS
+- Web Developer Certification - MIT
+- SEO & Web Development Certificate - Udemy
+
+TECHNICAL SKILLS
+Frontend: React, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS
+Backend: Node.js, Firebase, Supabase
+Tools: WordPress, Git, Vite, SEO Optimization, Graphic Design
+Soft Skills: Problem Solving, Communication, Team Collaboration, Remote Work, Time Management, Adaptability
+
+EXPERIENCE
+Senior Front-end Developer - Kara Technologies (2022 - Present)
+- Developed 20+ responsive web applications using React and TypeScript
+- Improved application performance by 40% through optimization techniques
+- Mentored junior developers and established coding standards
+
+Front-end Developer - Creative Digital Solutions (2021 - 2022)
+- Built 15+ client projects using HTML, CSS, JavaScript, and React
+- Collaborated with design teams to implement pixel-perfect interfaces
+- Reduced page load times by 35% through code optimization
+
+Junior Web Developer - Tech Innovators (2020 - 2021)
+- Completed 10+ web development projects using WordPress and custom HTML/CSS
+- Learned React, JavaScript ES6+, and modern development workflows
+- Participated in code reviews and agile development processes
+
+FEATURED PROJECTS
+1. Healinton - Comprehensive health application
+2. One Worship - Mental health support platform
+3. Chat Automation System - Supabase-integrated CRM solution
+4. Grace Chapel Website - Interactive church platform
+5. EcoTracker - Environmental impact dashboard
+6. FinanceFlow - Personal budget management tool
+7. TaskMaster Pro - Project management platform
+
+ACHIEVEMENTS
+- 60+ Projects Completed
+- 4+ Years Experience
+- 100% Remote Work Ready
+- Continuous Learner
+- Expert in Modern Web Development

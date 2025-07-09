@@ -17,21 +17,27 @@ const Skills = () => {
     {
       title: 'Tools & Frameworks',
       skills: [
+        { name: 'WordPress', level: 90, color: 'from-blue-600 to-blue-800' },
+        { name: 'SEO Optimization', level: 88, color: 'from-green-400 to-green-600' },
+        { name: 'Graphic Design', level: 85, color: 'from-pink-400 to-pink-600' },
         { name: 'Vite', level: 85, color: 'from-purple-400 to-purple-600' },
-        { name: 'WordPress', level: 88, color: 'from-blue-600 to-blue-800' },
         { name: 'Git', level: 90, color: 'from-red-400 to-red-600' },
         { name: 'Node.js', level: 82, color: 'from-green-400 to-green-600' },
         { name: 'Firebase', level: 80, color: 'from-yellow-500 to-orange-500' },
-        { name: 'Chart.js', level: 85, color: 'from-pink-400 to-pink-600' }
+        { name: 'Supabase', level: 85, color: 'from-emerald-400 to-emerald-600' }
       ]
     },
     {
-      title: 'Design & UX',
+      title: 'Soft Skills & Expertise',
       skills: [
-        { name: 'Responsive Design', level: 95, color: 'from-indigo-400 to-indigo-600' },
-        { name: 'Accessibility', level: 88, color: 'from-green-400 to-green-600' },
-        { name: 'Performance Optimization', level: 90, color: 'from-red-400 to-red-600' },
-        { name: 'UI/UX Principles', level: 85, color: 'from-purple-400 to-purple-600' }
+        { name: 'Problem Solving', level: 95, color: 'from-indigo-400 to-indigo-600' },
+        { name: 'Communication', level: 92, color: 'from-blue-400 to-blue-600' },
+        { name: 'Team Collaboration', level: 90, color: 'from-purple-400 to-purple-600' },
+        { name: 'Remote Work', level: 95, color: 'from-green-400 to-green-600' },
+        { name: 'Time Management', level: 88, color: 'from-yellow-400 to-yellow-600' },
+        { name: 'Adaptability', level: 93, color: 'from-pink-400 to-pink-600' },
+        { name: 'Critical Thinking', level: 90, color: 'from-red-400 to-red-600' },
+        { name: 'Client Relations', level: 87, color: 'from-teal-400 to-teal-600' }
       ]
     }
   ];
@@ -45,12 +51,12 @@ const Skills = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full mb-6"></div>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            A comprehensive toolkit of modern technologies and frameworks that enable me to build 
-            exceptional web experiences.
+            A comprehensive toolkit of modern technologies, frameworks, and soft skills that enable me to build 
+            exceptional web experiences and work effectively in any environment.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, categoryIndex) => (
             <div 
               key={categoryIndex}
@@ -77,18 +83,51 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="mt-16 grid md:grid-cols-3 gap-8">
+        {/* Education & Certifications */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/30">
+            <h3 className="text-2xl font-bold text-white mb-6">Education</h3>
+            <div className="space-y-4">
+              <div className="border-l-4 border-blue-400 pl-4">
+                <h4 className="text-lg font-semibold text-white">Bachelor of Science in Computer Science</h4>
+                <p className="text-slate-300">Courage University</p>
+                <p className="text-slate-400 text-sm">Graduated with focus on software development and system design</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/30">
+            <h3 className="text-2xl font-bold text-white mb-6">Certifications</h3>
+            <div className="space-y-4">
+              <div className="border-l-4 border-purple-400 pl-4">
+                <h4 className="text-lg font-semibold text-white">Web Developer Certification</h4>
+                <p className="text-slate-300">MIT</p>
+              </div>
+              <div className="border-l-4 border-green-400 pl-4">
+                <h4 className="text-lg font-semibold text-white">SEO & Web Development</h4>
+                <p className="text-slate-300">Udemy</p>
+              </div>
+            </div>
+            <div className="mt-6 p-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg border border-slate-700/30">
+              <p className="text-slate-300 text-sm">
+                <span className="font-semibold text-blue-400">Continuous Learner:</span> Always staying updated with the latest technologies and industry best practices
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center bg-slate-800/20 rounded-xl p-6 border border-slate-700/20">
-            <div className="text-3xl font-bold text-blue-400 mb-2">50+</div>
+            <div className="text-3xl font-bold text-blue-400 mb-2">60+</div>
             <div className="text-slate-300">Projects Completed</div>
           </div>
           <div className="text-center bg-slate-800/20 rounded-xl p-6 border border-slate-700/20">
-            <div className="text-3xl font-bold text-purple-400 mb-2">3+</div>
+            <div className="text-3xl font-bold text-purple-400 mb-2">4+</div>
             <div className="text-slate-300">Years Experience</div>
           </div>
           <div className="text-center bg-slate-800/20 rounded-xl p-6 border border-slate-700/20">
             <div className="text-3xl font-bold text-pink-400 mb-2">100%</div>
-            <div className="text-slate-300">Client Satisfaction</div>
+            <div className="text-slate-300">Remote Work Ready</div>
           </div>
         </div>
       </div>

@@ -23,8 +23,12 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Create mailto link for form submission
+    const mailtoLink = `mailto:wiskara1@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    
+    window.location.href = mailtoLink;
     
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -38,8 +42,8 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: 'Email',
-      value: 'wisdom.kara@email.com',
-      href: 'mailto:wisdom.kara@email.com',
+      value: 'wiskara1@gmail.com',
+      href: 'mailto:wiskara1@gmail.com',
       color: 'from-blue-400 to-blue-600'
     },
     {
@@ -52,15 +56,21 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: 'Location',
-      value: 'Available Worldwide',
+      value: 'Available Worldwide (Remote)',
       href: '#',
       color: 'from-purple-400 to-purple-600'
     }
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Background Blobs */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Let's <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Connect</span>
@@ -68,6 +78,7 @@ const Contact = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full mb-6"></div>
           <p className="text-slate-400 max-w-2xl mx-auto">
             Ready to bring your ideas to life? Let's discuss how we can create something amazing together.
+            Available for remote collaboration worldwide.
           </p>
         </div>
 
@@ -101,11 +112,11 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-slate-700/30">
+            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-slate-700/30 backdrop-blur-sm">
               <h4 className="text-white font-bold mb-3">Response Time</h4>
               <p className="text-slate-400 text-sm">
                 I typically respond to all inquiries within 24 hours. For urgent projects, 
-                please mention it in your message.
+                please mention it in your message. Available for immediate remote collaboration.
               </p>
             </div>
           </div>
@@ -116,9 +127,9 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Send me a message</h3>
               
               {isSubmitted && (
-                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3">
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 backdrop-blur-sm">
                   <CheckCircle className="h-5 w-5 text-green-400" />
-                  <p className="text-green-400">Thank you! Your message has been sent successfully.</p>
+                  <p className="text-green-400">Thank you! Your email client will open with the message ready to send.</p>
                 </div>
               )}
 
@@ -135,7 +146,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors backdrop-blur-sm"
                       placeholder="Your full name"
                     />
                   </div>
@@ -150,7 +161,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors backdrop-blur-sm"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -167,7 +178,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors backdrop-blur-sm"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -183,7 +194,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors resize-none backdrop-blur-sm"
                     placeholder="Tell me about your project or ideas..."
                   />
                 </div>
@@ -196,7 +207,7 @@ const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                      Sending...
+                      Opening Email...
                     </>
                   ) : (
                     <>

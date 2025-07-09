@@ -1,11 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(true);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,10 +25,18 @@ const Navigation = () => {
     { href: '#contact', label: 'Contact' },
   ];
 
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
+    }
+  };
+
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-slate-700/50' 
+        ? 'bg-slate-900/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-slate-700/50' 
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,23 +51,23 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.href}
-                  href={item.href}
-                  className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:bg-slate-700/50"
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-slate-300 dark:text-slate-300 hover:text-white dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:bg-slate-700/50"
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
             </div>
           </div>
 
           <div className="flex items-center space-x-4">
             <button
-              onClick={() => setIsDark(!isDark)}
+              onClick={toggleTheme}
               className="p-2 rounded-lg bg-slate-700/50 text-slate-300 hover:text-white transition-colors"
             >
-              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
             
             {/* Mobile menu button */}
@@ -79,14 +88,13 @@ const Navigation = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.href}
-                href={item.href}
-                className="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
-                onClick={() => setIsOpen(false)}
+                onClick={() => handleNavClick(item.href)}
+                className="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors w-full text-left"
               >
                 {item.label}
-              </a>
+              </button>
             ))}
           </div>
         </div>
