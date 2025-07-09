@@ -47,8 +47,8 @@ const Hero = () => {
   const downloadCV = () => {
     // Create a simple CV download (you can replace this with your actual CV file)
     const link = document.createElement('a');
-    link.href = '/cv.txt'; // Replace with your CV file path
-    link.download = 'Wisdom_Kara_CV.txt';
+    link.href = '/Kara -Wisdom-CV-Web-Dev'; // Replace with your CV file path
+    link.download = 'Kara -Wisdom-CV-Web-Dev';
     link.click();
   };
 
