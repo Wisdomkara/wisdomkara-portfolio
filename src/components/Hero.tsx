@@ -47,13 +47,13 @@ const Hero = () => {
   const downloadCV = () => {
     // Create a simple CV download (you can replace this with your actual CV file)
     const link = document.createElement('a');
-    link.href = '/placeholder.svg'; // Replace with your CV file path
-    link.download = 'Wisdom_Kara_CV.pdf';
+    link.href = '/cv.txt'; // Replace with your CV file path
+    link.download = 'Wisdom_Kara_CV.txt';
     link.click();
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24">
       {/* Animated Background with Blobs */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
@@ -69,20 +69,20 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white dark:text-white light:text-slate-900 mb-6 mt-8">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 Wisdom Kara
               </span>
             </h1>
             
-            <div className="text-xl md:text-2xl lg:text-3xl text-slate-300 mb-8 h-16 flex items-center justify-center lg:justify-start">
+            <div className="text-xl md:text-2xl lg:text-3xl text-slate-300 dark:text-slate-300 light:text-slate-600 mb-8 h-16 flex items-center justify-center lg:justify-start">
               <span className="border-r-2 border-blue-400 pr-2 animate-pulse">
                 {text}
               </span>
             </div>
             
-            <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 mb-12 leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-400 dark:text-slate-400 light:text-slate-700 max-w-2xl mx-auto lg:mx-0 mb-12 leading-relaxed">
               Building responsive, user-centered digital experiences through clean code, 
               modern design principles, and performance optimization. Passionate about solving 
               real-world problems through technology.
@@ -97,7 +97,7 @@ const Hero = () => {
               </button>
               <button 
                 onClick={downloadCV}
-                className="px-8 py-4 border border-slate-600 text-slate-300 rounded-lg font-semibold hover:bg-slate-700/50 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
+                className="px-8 py-4 border border-slate-600 text-slate-300 dark:text-slate-300 light:text-slate-700 rounded-lg font-semibold hover:bg-slate-700/50 dark:hover:bg-slate-700/50 light:hover:bg-slate-200/50 transition-all duration-300 flex items-center gap-2 hover:-translate-y-1"
               >
                 <Download className="h-5 w-5" />
                 Download CV
@@ -109,7 +109,7 @@ const Hero = () => {
                 href="https://github.com/Wisdomkara" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/50 transition-all duration-300 hover:-translate-y-1"
+                className="p-3 bg-slate-800/50 dark:bg-slate-800/50 light:bg-slate-200/50 backdrop-blur-sm rounded-lg text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-white dark:hover:text-white light:hover:text-slate-900 hover:bg-slate-700/50 dark:hover:bg-slate-700/50 light:hover:bg-slate-300/50 transition-all duration-300 hover:-translate-y-1"
               >
                 <Github className="h-6 w-6" />
               </a>
@@ -117,13 +117,13 @@ const Hero = () => {
                 href="https://www.linkedin.com/in/wisdom-kara-" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/50 transition-all duration-300 hover:-translate-y-1"
+                className="p-3 bg-slate-800/50 dark:bg-slate-800/50 light:bg-slate-200/50 backdrop-blur-sm rounded-lg text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-white dark:hover:text-white light:hover:text-slate-900 hover:bg-slate-700/50 dark:hover:bg-slate-700/50 light:hover:bg-slate-300/50 transition-all duration-300 hover:-translate-y-1"
               >
                 <Linkedin className="h-6 w-6" />
               </a>
               <a 
                 href="mailto:wiskara1@gmail.com"
-                className="p-3 bg-slate-800/50 backdrop-blur-sm rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/50 transition-all duration-300 hover:-translate-y-1"
+                className="p-3 bg-slate-800/50 dark:bg-slate-800/50 light:bg-slate-200/50 backdrop-blur-sm rounded-lg text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-white dark:hover:text-white light:hover:text-slate-900 hover:bg-slate-700/50 dark:hover:bg-slate-700/50 light:hover:bg-slate-300/50 transition-all duration-300 hover:-translate-y-1"
               >
                 <Mail className="h-6 w-6" />
               </a>
@@ -133,11 +133,18 @@ const Hero = () => {
           {/* Right Side - Profile Picture Space */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-400/20 to-purple-600/20 backdrop-blur-sm border border-slate-700/30 flex items-center justify-center">
-                {/* Placeholder for profile picture */}
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-400/20 to-purple-600/20 backdrop-blur-sm border border-slate-700/30 dark:border-slate-700/30 light:border-slate-300/30 flex items-center justify-center">
+                {/* Space for profile picture - you can replace this with an img tag */}
                 <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1">
-                  <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
-                    <span className="text-6xl lg:text-8xl font-bold text-white">WK</span>
+                  <div className="w-full h-full rounded-full bg-slate-800 dark:bg-slate-800 light:bg-slate-100 flex items-center justify-center">
+                    <span className="text-6xl lg:text-8xl font-bold text-white dark:text-white light:text-slate-800">WK</span>
+                    {/* Replace the above with:
+                    <img 
+                      src="/path-to-your-image.jpg" 
+                      alt="Wisdom Kara" 
+                      className="w-full h-full rounded-full object-cover"
+                    />
+                    */}
                   </div>
                 </div>
               </div>
