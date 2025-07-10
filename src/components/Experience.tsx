@@ -163,11 +163,11 @@ const Experience = () => {
               <h3 className="text-xl font-bold text-white mb-6">Quick Stats</h3>
               <div className="space-y-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400">3+</div>
+                  <div className="text-2xl font-bold text-blue-400">4+</div>
                   <div className="text-slate-400 text-sm">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-400">50+</div>
+                  <div className="text-2xl font-bold text-purple-400">60+</div>
                   <div className="text-slate-400 text-sm">Projects Completed</div>
                 </div>
                 <div className="text-center">
