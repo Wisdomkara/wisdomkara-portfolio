@@ -10,114 +10,180 @@ const Projects = () => {
       id: 1,
       title: 'Healinton',
       category: 'healthcare',
-      description: 'Very robust health application providing comprehensive healthcare solutions',
-      longDescription: 'A comprehensive health platform with advanced features for patient management, health tracking, and medical consultations.',
+      description:
+        'Very robust health application providing comprehensive healthcare solutions',
+      longDescription:
+        'A comprehensive health platform with advanced features for patient management, health tracking, and medical consultations.',
       image: '/placeholder.svg',
-      tech: ['React', 'Node.js', 'Healthcare APIs', 'Real-time Data'],
-      features: ['Patient management', 'Health tracking', 'Medical consultations', 'Appointment scheduling'],
+      tech: ['React', 'Node.js', 'Healthcare APIs', 'Real-time Data,supabase'],
+      features: [
+        'Patient management',
+        'Health tracking',
+        'Medical consultations',
+        'Appointment scheduling',
+      ],
       icon: <Activity className="h-8 w-8" />,
       color: 'from-emerald-400 to-green-600',
       github: '#',
-      demo: 'https://healinton.lovable.app'
+      demo: 'https://healinton.lovable.app',
     },
     {
       id: 2,
       title: 'One Worship',
       category: 'healthcare',
-      description: 'Comprehensive web application supporting individuals with emotional and mental health challenges',
-      longDescription: 'A full-featured mental health platform with dynamic quote generation, support request forms, advisor connections, and crisis intervention resources.',
+      description:
+        'Comprehensive web application supporting individuals with emotional and mental health challenges',
+      longDescription:
+        'A full-featured mental health platform with dynamic quote generation, support request forms, advisor connections, and crisis intervention resources.',
       image: '/placeholder.svg',
       tech: ['React', 'Node.js', 'Real-time messaging', 'Responsive Design'],
-      features: ['Dynamic quote generation', 'Support request forms', 'Advisor connection tools', 'Crisis intervention resources'],
+      features: [
+        'Dynamic quote generation',
+        'Support request forms',
+        'Advisor connection tools',
+        'Crisis intervention resources',
+      ],
       icon: <Heart className="h-8 w-8" />,
       color: 'from-red-400 to-pink-600',
-      github: '#',
-      demo: '#'
+      github: 'https://wisdomkara/inspiring/',
+      demo: 'https://wisdomkara.github.io/inspiring/',
     },
     {
       id: 3,
       title: 'Chat Automation System',
       category: 'automation',
-      description: 'Advanced chat automation system with 50% Supabase integration and CRM capabilities',
-      longDescription: 'Intelligent chat automation platform integrating Supabase backend with comprehensive CRM features for streamlined customer communication.',
+      description:
+        'Advanced chat automation system with 50% Supabase integration and CRM capabilities',
+      longDescription:
+        'Intelligent chat automation platform integrating Supabase backend with comprehensive CRM features for streamlined customer communication.',
       image: '/placeholder.svg',
       tech: ['React', 'Supabase', 'CRM Integration', 'AI Chat'],
-      features: ['Automated responses', 'CRM integration', 'Real-time analytics', 'Customer management'],
+      features: [
+        'Automated responses',
+        'CRM integration',
+        'Real-time analytics',
+        'Customer management',
+      ],
       icon: <Brain className="h-8 w-8" />,
       color: 'from-cyan-400 to-blue-600',
       github: '#',
-      demo: '#'
+      demo: '#',
     },
     {
       id: 4,
       title: 'Inspiring',
       category: 'motivation',
-      description: 'Motivational web platform delivering personalized daily inspirational content',
-      longDescription: 'A beautiful motivation platform with custom JavaScript logic, clean UI design, user preference tracking, and social sharing capabilities.',
+      description:
+        'Motivational web platform delivering personalized daily inspirational content',
+      longDescription:
+        'A beautiful motivation platform with custom JavaScript logic, clean UI design, user preference tracking, and social sharing capabilities.',
       image: '/placeholder.svg',
-      tech: ['Vanilla JavaScript', 'CSS Animations', 'Local Storage', 'API Integration'],
-      features: ['Custom JavaScript logic', 'Clean UI design', 'User preference tracking', 'Social sharing capabilities'],
+      tech: [
+        'Vanilla JavaScript',
+        'CSS Animations',
+        'Local Storage',
+        'API Integration',
+      ],
+      features: [
+        'Custom JavaScript logic',
+        'Clean UI design',
+        'User preference tracking',
+        'Social sharing capabilities',
+      ],
       icon: <Sparkles className="h-8 w-8" />,
       color: 'from-yellow-400 to-orange-500',
       github: '#',
-      demo: '#'
+      demo: '#',
     },
     {
       id: 5,
       title: 'Grace Chapel Website',
       category: 'community',
-      description: 'Fully responsive, animated church platform enhancing virtual community engagement',
-      longDescription: 'Interactive church platform with watch online streaming, events management, community join system, and sermon archives.',
+      description:
+        'Fully responsive, animated church platform enhancing virtual community engagement',
+      longDescription:
+        'Interactive church platform with watch online streaming, events management, community join system, and sermon archives.',
       image: '/placeholder.svg',
-      tech: ['WordPress', 'Custom JavaScript', 'Responsive Design', 'Video Integration'],
-      features: ['Watch Online streaming', 'Events management', 'Community join system', 'Sermon archives'],
+      tech: [
+        'WordPress',
+        'Custom JavaScript',
+        'Responsive Design',
+        'Video Integration',
+      ],
+      features: [
+        'Watch Online streaming',
+        'Events management',
+        'Community join system',
+        'Sermon archives',
+      ],
       icon: <Calendar className="h-8 w-8" />,
       color: 'from-blue-400 to-indigo-600',
       github: '#',
-      demo: '#'
+      demo: '#',
     },
     {
       id: 6,
       title: 'EcoTracker',
       category: 'environment',
-      description: 'Sustainability tracking application helping users monitor their carbon footprint',
-      longDescription: 'Environmental impact dashboard with data visualization, progress tracking, eco-friendly tips, and community challenges.',
+      description:
+        'Sustainability tracking application helping users monitor their carbon footprint',
+      longDescription:
+        'Environmental impact dashboard with data visualization, progress tracking, eco-friendly tips, and community challenges.',
       image: '/placeholder.svg',
       tech: ['React', 'Chart.js', 'Firebase', 'PWA'],
-      features: ['Data visualization', 'Progress tracking', 'Eco-friendly tips', 'Community challenges'],
+      features: [
+        'Data visualization',
+        'Progress tracking',
+        'Eco-friendly tips',
+        'Community challenges',
+      ],
       icon: <Leaf className="h-8 w-8" />,
       color: 'from-green-400 to-teal-600',
       github: '#',
-      demo: '#'
+      demo: '#',
     },
     {
       id: 7,
       title: 'FinanceFlow',
       category: 'finance',
-      description: 'Intuitive financial planning tool with expense tracking and budget optimization',
-      longDescription: 'Personal budget management with real-time expense monitoring, budget alerts, financial goal setting, and data export.',
+      description:
+        'Intuitive financial planning tool with expense tracking and budget optimization',
+      longDescription:
+        'Personal budget management with real-time expense monitoring, budget alerts, financial goal setting, and data export.',
       image: '/placeholder.svg',
       tech: ['React', 'Context API', 'Chart.js', 'Local Storage'],
-      features: ['Real-time expense monitoring', 'Budget alerts', 'Financial goal setting', 'Data export'],
+      features: [
+        'Real-time expense monitoring',
+        'Budget alerts',
+        'Financial goal setting',
+        'Data export',
+      ],
       icon: <DollarSign className="h-8 w-8" />,
       color: 'from-emerald-400 to-green-600',
       github: '#',
-      demo: '#'
+      demo: '#',
     },
     {
       id: 8,
       title: 'TaskMaster Pro',
       category: 'productivity',
-      description: 'Collaborative project management platform for teams and freelancers',
-      longDescription: 'Project management solution with task assignment, deadline tracking, team collaboration, and progress analytics.',
+      description:
+        'Collaborative project management platform for teams and freelancers',
+      longDescription:
+        'Project management solution with task assignment, deadline tracking, team collaboration, and progress analytics.',
       image: '/placeholder.svg',
       tech: ['React', 'Firebase', 'Real-time updates', 'Drag & Drop'],
-      features: ['Task assignment', 'Deadline tracking', 'Team collaboration', 'Progress analytics'],
+      features: [
+        'Task assignment',
+        'Deadline tracking',
+        'Team collaboration',
+        'Progress analytics',
+      ],
       icon: <CheckSquare className="h-8 w-8" />,
       color: 'from-purple-400 to-violet-600',
       github: '#',
-      demo: '#'
-    }
+      demo: '#',
+    },
   ];
 
   const categories = [

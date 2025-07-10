@@ -44,22 +44,22 @@ const Contact = () => {
       title: 'Email',
       value: 'wiskara1@gmail.com',
       href: 'mailto:wiskara1@gmail.com',
-      color: 'from-blue-400 to-blue-600'
+      color: 'from-blue-400 to-blue-600',
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
-      color: 'from-green-400 to-green-600'
+      value: '+2347084153584, +2348152282340',
+      href: 'tel:+2347084153584',
+      color: 'from-green-400 to-green-600',
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       title: 'Location',
       value: 'Available Worldwide (Remote)',
       href: '#',
-      color: 'from-purple-400 to-purple-600'
-    }
+      color: 'from-purple-400 to-purple-600',
+    },
   ];
 
   return (
@@ -195,7 +195,7 @@ const Contact = () => {
                     required
                     rows={6}
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors resize-none backdrop-blur-sm"
-                    placeholder="Tell me about your project or ideas..."
+                    placeholder="Tell me about your project or ideas you want to work on..."
                   />
                 </div>
 
