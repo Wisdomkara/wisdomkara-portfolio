@@ -163,15 +163,15 @@ const Experience = () => {
               <h3 className="text-xl font-bold text-white mb-6">Quick Stats</h3>
               <div className="space-y-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400">4+</div>
+                  <div className="text-2xl font-bold text-blue-400">3+</div>
                   <div className="text-slate-400 text-sm">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-400">60+</div>
+                  <div className="text-2xl font-bold text-purple-400">50+</div>
                   <div className="text-slate-400 text-sm">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-400">15+</div>
+                  <div className="text-2xl font-bold text-green-400">13+</div>
                   <div className="text-slate-400 text-sm">Technologies Mastered</div>
                 </div>
               </div>
@@ -184,7 +184,7 @@ const Experience = () => {
               <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1">
                 Download CV
               </button>
-            </div>
+            </div> 
           </div>
         </div>
       </div>
