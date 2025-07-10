@@ -46,16 +46,15 @@ const Hero = () => {
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
-
+  //  CV download function
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/kara.pdf';
-    link.download = 'kara.pdf';
-    document.body.appendChild(link); // fix for some browsers
+    link.href = 'https://wisdomkara.github.io/wisdomkara-portfolio/kara.pdf'; // full URL
+    link.setAttribute('download', 'kara.pdf'); // this tells the browser to download it
+    document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
-  
 
   return (
     <section
