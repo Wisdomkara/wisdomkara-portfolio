@@ -14,7 +14,7 @@ const Hero = () => {
     'UI/UX Enthusiast',
     'SEO Specialist',
     'WordPress Expert',
-    'Social Media Expert'
+    'Social Media Expert',
   ];
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const Hero = () => {
     // Create a simple CV download (you can replace this with your actual CV file)
     const link = document.createElement('a');
     link.href = '/Kara -Wisdom-CV-Web-Dev.pdf'; // Replace with your CV file path
-    link.download = 'Kara -Wisdom-CV-Web-Dev';
+    link.download = 'Kara -Wisdom-CV-Web-Dev.pdf';
     link.click();
   };
 
