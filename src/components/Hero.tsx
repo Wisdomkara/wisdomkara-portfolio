@@ -48,12 +48,14 @@ const Hero = () => {
   };
 
   const downloadCV = () => {
-    // Create a simple CV download (you can replace this with your actual CV file)
     const link = document.createElement('a');
-    link.href = '/kara.pdf'; // Replace with your CV file path
+    link.href = '/kara.pdf';
     link.download = 'kara.pdf';
+    document.body.appendChild(link); // fix for some browsers
     link.click();
+    document.body.removeChild(link);
   };
+  
 
   return (
     <section
