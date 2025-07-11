@@ -6,7 +6,7 @@ const Experience = () => {
   const experiences = [
     {
       title: 'Senior Front-end Developer',
-      company: 'Kara Technologies',
+      company: 'Kanel Technologies',
       location: 'Remote',
       period: '2022 - Present',
       description: 'Leading front-end development initiatives, creating responsive web applications with React and modern JavaScript frameworks.',
@@ -35,7 +35,7 @@ const Experience = () => {
     {
       title: 'Junior Web Developer',
       company: 'Tech Innovators',
-      location: 'On-site',
+      location: 'Remote',
       period: '2020 - 2021',
       description: 'Focused on learning modern web development practices and contributing to team projects.',
       achievements: [
