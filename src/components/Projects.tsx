@@ -25,7 +25,7 @@ const Projects = () => {
       icon: <Activity className="h-8 w-8" />,
       color: 'from-emerald-400 to-green-600',
       github: '#',
-      demo: 'https://healinton.lovable.app',
+      demo: 'https://healinton.vercel.app/',
     },
     {
       id: 2,
