@@ -185,8 +185,8 @@ html {
       /* Blue glow */ 0 0 10px rgba(255, 255, 255, 0.3); /* White glow */
   }
   50% {
-    box-shadow: 0 0 40px rgba(49, 124, 245, 0.8),
-      /* Stronger Blue */ 0 0 20px rgba(255, 255, 255, 0.965); /* Stronger White */
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.8),
+      /* Stronger Blue */ 0 0 20px rgba(255, 255, 255, 0.805); /* Stronger White */
   }
 }
 
