@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -106,7 +105,12 @@ All colors MUST be HSL.
 
   /* Light mode styles */
   .light {
-    background: linear-gradient(135deg, hsl(210, 40%, 98%) 0%, hsl(220, 13%, 91%) 50%, hsl(210, 40%, 96%) 100%);
+    background: linear-gradient(
+      135deg,
+      hsl(210, 40%, 98%) 0%,
+      hsl(220, 13%, 91%) 50%,
+      hsl(210, 40%, 96%) 100%
+    );
   }
 
   .light .bg-slate-800\/30 {
@@ -137,8 +141,13 @@ All colors MUST be HSL.
 
 /* Custom animations */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .animate-float {
@@ -160,6 +169,7 @@ All colors MUST be HSL.
 /* Glassmorphism effect */
 .glass {
   background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: lur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -169,10 +179,17 @@ html {
   scroll-behavior: smooth;
 }
 @keyframes glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-    50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8); }
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5),
+      /* Blue glow */ 0 0 10px rgba(255, 255, 255, 0.3); /* White glow */
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(49, 124, 245, 0.8),
+      /* Stronger Blue */ 0 0 20px rgba(255, 255, 255, 0.965); /* Stronger White */
+  }
 }
 
 .glow-animation {
-    animation: glow 2s ease-in-out infinite;
+  animation: glow 2s ease-in-out infinite;
 }
