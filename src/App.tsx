@@ -5,6 +5,10 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Index from './pages/Index';
 import NotFound from './pages/NotFound';
+// In main.tsx or App.tsx
+import emailjs from "@emailjs/browser";
+
+emailjs.init("vDkxokCw5SWcVQfxL");
 
 const queryClient = new QueryClient();
 
