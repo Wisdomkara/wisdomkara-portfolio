@@ -1,63 +1,63 @@
-import React, { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
+import emailjs from "@emailjs/browser";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 
+interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError("");
 
     try {
-      const response = await fetch(
-        "https://api.emailjs.com/api/v1.0/email/send",
+      await emailjs.send(
+        "service_6p735dq", // ✅ Service ID
+        "template_set8zlm", // ✅ Template ID
         {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            service_id: "service_6p735dq",
-            template_id: "template_set8zlm", // ✅ FIXED TYPO
-            user_id: "vDkxokCw5SWcVQfxL",
-            template_params: {
-              from_name: formData.name, // ✅ MATCHES TEMPLATE
-              from_email: formData.email, // ✅ MATCHES TEMPLATE
-              subject: formData.subject,
-              message: formData.message,
-            },
-          }),
-        }
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "vDkxokCw5SWcVQfxL" // ✅ Public Key
       );
-
-      if (!response.ok) {
-        throw new Error("EmailJS request failed");
-      }
 
       setIsSubmitted(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
 
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (err) {
-      console.error("EmailJS error:", err);
-      setError("Failed to send message. Please try again later.");
+      console.error("EmailJS SDK error:", err);
+      setError(
+        "Failed to send message. Please try again later or contact me directly."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -90,18 +90,15 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-slate-900 min-h-screen"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 min-h-screen"
     >
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Let's{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              Connect
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Let’s <span className="text-purple-400">Connect</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Ready to bring your ideas to life? Let’s build something amazing.
+            Ready to bring your ideas to life? Send me a message.
           </p>
         </div>
 
