@@ -38,7 +38,7 @@ const Hero = () => {
           }
         }
       },
-      isDeleting ? 50 : 150
+      isDeleting ? 50 : 150,
     );
 
     return () => clearTimeout(timeout);
@@ -63,7 +63,7 @@ const Hero = () => {
     gsap.fromTo(
       imgRef.current,
       { opacity: 0, scale: 0.8, y: 40 },
-      { opacity: 1, scale: 1, y: 0, duration: 1.2, ease: "power3.out" }
+      { opacity: 1, scale: 1, y: 0, duration: 1.2, ease: "power3.out" },
     );
   }, []);
 
@@ -165,7 +165,7 @@ const Hero = () => {
                 ref={imgRef}
                 src={myImage}
                 alt="Kara Wisdom's Photo"
-                className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]  object-cover rounded-full border-4 border-white shadow-3xl transition duration-300 hover:to-blue-500 glow-animation"
+                className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]  object-scale-up rounded-full border-4 border-white shadow-3xl transition duration-300 hover:to-blue-500 glow-animation"
               />
 
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
