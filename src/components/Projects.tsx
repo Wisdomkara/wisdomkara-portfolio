@@ -61,9 +61,9 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Inspiring",
-      category: "motivation",
-      description: "Daily inspirational content platform",
+      title: "Kanel Technologies",
+      category: "Technology",
+      description: "A platform to showcase the services of the firm and take bookings",
       image: "/projects/inspiring.png",
       icon: <Sparkles className="h-8 w-8" />,
       color: "from-yellow-400 to-orange-500",
@@ -122,12 +122,12 @@ const Projects = () => {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="group bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-700 hover:-translate-y-2 transition-all"
+            className="group bg-white/80 dark:bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:-translate-y-2 transition-all"
           >
             {/* IMAGE AREA */}
-            <div className="relative h-48 bg-slate-900 flex items-center justify-center">
+            <div className="relative h-48 bg-slate-100 dark:bg-slate-900 flex items-center justify-center">
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20`}
+                className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20 dark:opacity-20`}
               />
 
               {/* IMAGE */}
@@ -153,13 +153,13 @@ const Projects = () => {
               <div className="absolute top-4 right-4 flex gap-2 z-20">
                 <a
                   href={project.github}
-                  className="p-2 bg-black/60 rounded-lg text-white"
+                  className="p-2 bg-white/70 text-slate-800 rounded-lg border border-slate-200 dark:border-transparent dark:bg-black/60 dark:text-white"
                 >
                   <Github className="h-4 w-4" />
                 </a>
                 <a
                   href={`/projects/${slugify(project.title)}`}
-                  className="p-2 bg-black/60 rounded-lg text-white"
+                  className="p-2 bg-white/70 text-slate-800 rounded-lg border border-slate-200 dark:border-transparent dark:bg-black/60 dark:text-white"
                 >
                   <ExternalLink className="h-4 w-4" />
                 </a>
@@ -168,8 +168,10 @@ const Projects = () => {
 
             {/* CONTENT */}
             <div className="p-6">
-              <h3 className="text-xl font-bold text-white">{project.title}</h3>
-              <p className="text-slate-400 text-sm mt-2">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                {project.title}
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm mt-2">
                 {project.description}
               </p>
               <a
