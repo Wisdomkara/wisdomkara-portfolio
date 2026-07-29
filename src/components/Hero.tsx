@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ChevronDown, Github, Linkedin, Mail, Download } from "lucide-react";
-import myImage from "../assets/kara.jpeg";
+import myImage from "../assets/wiz.jpeg";
 import { gsap } from "gsap";
 
 const Hero = () => {
@@ -165,7 +165,7 @@ const Hero = () => {
                 ref={imgRef}
                 src={myImage}
                 alt="Kara Wisdom's Photo"
-                className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]  object-scale-up rounded-full border-4 border-white shadow-3xl transition duration-300 hover:to-blue-500 glow-animation"
+                className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-cover object-top rounded-full border-4 border-white shadow-3xl transition duration-300 hover:to-blue-500 glow-animation"
               />
 
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>

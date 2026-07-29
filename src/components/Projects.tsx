@@ -1,25 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   ExternalLink,
   Github,
   Eye,
-  Heart,
-  Brain,
-  Calendar,
-  Leaf,
-  DollarSign,
-  CheckSquare,
+  Building2,
+  ShoppingBag,
   Sparkles,
   Activity,
+  Zap,
 } from "lucide-react";
-
-/* ---------- SLUG GENERATOR ---------- */
-const slugify = (text: string) =>
-  text
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/\s+/g, "-");
 
 /* ---------- COMPONENT ---------- */
 const Projects = () => {
@@ -28,91 +17,58 @@ const Projects = () => {
       id: 1,
       title: "Healinton",
       category: "healthcare",
-      description: "Robust health application for modern healthcare",
+      description: "Healthcare platform built for modern patient and service workflows.",
       image: "healinton-logo.png",
       icon: <Activity className="h-8 w-8" />,
       color: "from-emerald-400 to-green-600",
       github: "https://github.com/Wisdomkara/Healinton",
-      demo: "https://healinton.vercel.app/",
+      demo: "https://healinton.com/",
     },
     {
       id: 2,
-      title: "Amaechi Homes",
-      category: "Real Estate",
-      description:
-        " A Wordpress real estate web-app that serves as an e-commerce web app that allows purchase and enquiries",
-      image: "homes.jpg",
-      icon: <Heart className="h-8 w-8" />,
-      color: "from-red-400 to-pink-600",
-      github: "#",
-      demo: "https://amaechihomes.com/",
+      title: "Exploits Energy",
+      category: "Energy",
+      description: "Corporate energy website presenting services and company information.",
+      image: "exploit-logo.png",
+      icon: <Zap className="h-8 w-8" />,
+      color: "from-amber-400 to-orange-600",
+      github: "",
+      demo: "https://exploitsenergy.com/",
     },
     {
       id: 3,
-      title: "BokkuMart",
-      category: "WebApp",
-      description:
-        "Webapp with location tracking system for customers using supabase, expressjs, typescript and react",
-      image: "bo.jpg ",
-      icon: <Brain className="h-8 w-8" />,
-      color: "from-cyan-400 to-blue-600",
-      github: "https://github.com/Wisdomkara/bokku",
-      demo: "https://bokku.vercel.app/",
+      title: "Kanel Innovations",
+      category: "Technology",
+      description: "Service and booking platform for a technology-focused firm.",
+      image: "kanel-innovations-logo.jpg",
+      icon: <Sparkles className="h-8 w-8" />,
+      color: "from-yellow-400 to-orange-500",
+      github: "",
+      demo: "https://kanelinnovations.vercel.app/",
     },
     {
       id: 4,
-      title: "Kanel Technologies",
-      category: "Technology",
-      description: "A platform to showcase the services of the firm and take bookings",
-      image: "/projects/inspiring.png",
-      icon: <Sparkles className="h-8 w-8" />,
-      color: "from-yellow-400 to-orange-500",
-      github: "#",
-      demo: "#",
+      title: "Amaechi Homes",
+      category: "Real Estate",
+      description:
+        "WordPress real estate web app for property discovery, purchases, and enquiries.",
+      image: "homes.jpg",
+      icon: <Building2 className="h-8 w-8" />,
+      color: "from-red-400 to-pink-600",
+      github: "",
+      demo: "https://amaechihomes.com/",
     },
     {
       id: 5,
-      title: "Grace Chapel",
-      category: "community",
-      description: "Church website and online community",
-      image: "/projects/grace-chapel.png",
-      icon: <Calendar className="h-8 w-8" />,
-      color: "from-blue-400 to-indigo-600",
-      github: "#",
-      demo: "#",
-    },
-    {
-      id: 6,
-      title: "EcoTracker",
-      category: "environment",
-      description: "Carbon footprint tracking platform",
-      image: "/projects/ecotracker.png",
-      icon: <Leaf className="h-8 w-8" />,
-      color: "from-green-400 to-teal-600",
-      github: "#",
-      demo: "#",
-    },
-    {
-      id: 7,
-      title: "FinanceFlow",
-      category: "finance",
-      description: "Personal finance management tool",
-      image: "/projects/financeflow.png",
-      icon: <DollarSign className="h-8 w-8" />,
-      color: "from-emerald-400 to-green-600",
-      github: "#",
-      demo: "#",
-    },
-    {
-      id: 8,
-      title: "TaskMaster Pro",
-      category: "productivity",
-      description: "Task and project management platform",
-      image: "/projects/taskmaster.png",
-      icon: <CheckSquare className="h-8 w-8" />,
-      color: "from-purple-400 to-violet-600",
-      github: "#",
-      demo: "#",
+      title: "BokkuMart",
+      category: "WebApp",
+      description:
+        "Web app with customer location tracking using Supabase, Express, TypeScript, and React.",
+      image: "bo.jpg",
+      icon: <ShoppingBag className="h-8 w-8" />,
+      color: "from-cyan-400 to-blue-600",
+      github: "https://github.com/Wisdomkara/bokku",
+      demo: "https://bokku.vercel.app/",
     },
   ];
 
@@ -131,12 +87,18 @@ const Projects = () => {
               />
 
               {/* IMAGE */}
-              <img
-                src={project.image}
-                alt={project.title}
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover z-10"
-              />
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                  className={`absolute inset-0 w-full h-full z-10 ${
+                    project.image.includes("logo")
+                      ? "object-contain bg-white p-6"
+                      : "object-cover"
+                  }`}
+                />
+              )}
 
               {/* ICON FALLBACK */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -151,14 +113,22 @@ const Projects = () => {
 
               {/* LINKS */}
               <div className="absolute top-4 right-4 flex gap-2 z-20">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${project.title} on GitHub`}
+                    className="p-2 bg-white/70 text-slate-800 rounded-lg border border-slate-200 dark:border-transparent dark:bg-black/60 dark:text-white"
+                  >
+                    <Github className="h-4 w-4" />
+                  </a>
+                )}
                 <a
-                  href={project.github}
-                  className="p-2 bg-white/70 text-slate-800 rounded-lg border border-slate-200 dark:border-transparent dark:bg-black/60 dark:text-white"
-                >
-                  <Github className="h-4 w-4" />
-                </a>
-                <a
-                  href={`/projects/${slugify(project.title)}`}
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open ${project.title}`}
                   className="p-2 bg-white/70 text-slate-800 rounded-lg border border-slate-200 dark:border-transparent dark:bg-black/60 dark:text-white"
                 >
                   <ExternalLink className="h-4 w-4" />
@@ -176,6 +146,8 @@ const Projects = () => {
               </p>
               <a
                 href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex mt-4 items-center gap-2 text-sm text-white bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 rounded-lg"
               >
                 <Eye className="h-4 w-4" /> View Live
