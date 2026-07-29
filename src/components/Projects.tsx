@@ -8,6 +8,7 @@ import {
   Sparkles,
   Activity,
   Zap,
+  GraduationCap,
 } from "lucide-react";
 
 /* ---------- COMPONENT ---------- */
@@ -18,7 +19,7 @@ const Projects = () => {
       title: "Healinton",
       category: "healthcare",
       description: "Healthcare platform built for modern patient and service workflows.",
-      image: "healinton-logo.png",
+      image: "/healinton-logo.png",
       icon: <Activity className="h-8 w-8" />,
       color: "from-emerald-400 to-green-600",
       github: "https://github.com/Wisdomkara/Healinton",
@@ -29,7 +30,7 @@ const Projects = () => {
       title: "Exploits Energy",
       category: "Energy",
       description: "Corporate energy website presenting services and company information.",
-      image: "exploit-logo.png",
+      image: "/exploit-logo.png",
       icon: <Zap className="h-8 w-8" />,
       color: "from-amber-400 to-orange-600",
       github: "",
@@ -40,7 +41,7 @@ const Projects = () => {
       title: "Kanel Innovations",
       category: "Technology",
       description: "Service and booking platform for a technology-focused firm.",
-      image: "kanel-innovations-logo.jpg",
+      image: "/kanel-innovations-logo.jpg",
       icon: <Sparkles className="h-8 w-8" />,
       color: "from-yellow-400 to-orange-500",
       github: "",
@@ -52,7 +53,7 @@ const Projects = () => {
       category: "Real Estate",
       description:
         "WordPress real estate web app for property discovery, purchases, and enquiries.",
-      image: "homes.jpg",
+      image: "/homes.jpg",
       icon: <Building2 className="h-8 w-8" />,
       color: "from-red-400 to-pink-600",
       github: "",
@@ -64,11 +65,23 @@ const Projects = () => {
       category: "WebApp",
       description:
         "Web app with customer location tracking using Supabase, Express, TypeScript, and React.",
-      image: "bo.jpg",
+      image: "/bo.jpg",
       icon: <ShoppingBag className="h-8 w-8" />,
       color: "from-cyan-400 to-blue-600",
       github: "https://github.com/Wisdomkara/bokku",
       demo: "https://bokku.vercel.app/",
+    },
+    {
+      id: 6,
+      title: "Insightful Tutorial Academy",
+      category: "Education",
+      description:
+        "Tutorial academy website for Insightful Tech Trybe's learning programs.",
+      image: "/insightful-tech-trybe-logo.jpeg",
+      icon: <GraduationCap className="h-8 w-8" />,
+      color: "from-green-400 to-emerald-600",
+      github: "",
+      demo: "https://insightful-tutorial-academy.vercel.app/",
     },
   ];
 

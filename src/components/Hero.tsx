@@ -3,22 +3,21 @@ import { ChevronDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import myImage from "../assets/wiz.jpeg";
 import { gsap } from "gsap";
 
+const roles = [
+  "Front-end Developer",
+  "React Specialist",
+  "GoHighLevel Expert",
+  "Digital Marketer",
+  "SEO Specialist",
+  "WordPress Expert",
+  "Social Media Expert",
+];
+
 const Hero = () => {
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const imgRef = useRef(null); // 👈 for GSAP animation
-
-  const roles = [
-    "Front-end Developer",
-    "React Specialist",
-    "GoHighLevel Expert",
-    "Digital Marketer",
-    "SEO Specialist",
-    "WordPress Expert",
-    "Social Media Expert",
-    "Social Media Expert",
-  ];
 
   // Typewriter effect
   useEffect(() => {
@@ -51,7 +50,7 @@ const Hero = () => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "https://wisdomkara.github.io/wisdomkara-portfolio/kara.pdf";
+    link.href = "/kara.pdf";
     link.setAttribute("download", "kara.pdf");
     document.body.appendChild(link);
     link.click();
