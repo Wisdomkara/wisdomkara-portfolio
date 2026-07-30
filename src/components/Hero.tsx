@@ -50,8 +50,8 @@ const Hero = () => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/kara.pdf";
-    link.setAttribute("download", "kara.pdf");
+    link.href = "/wisdom-kara-cv.docx";
+    link.setAttribute("download", "Wisdom Kara Software Developer AI Trainer.docx");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

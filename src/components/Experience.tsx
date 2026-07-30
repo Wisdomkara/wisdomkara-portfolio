@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Calendar, MapPin, Building, Award } from 'lucide-react';
+import { Calendar, MapPin, Building, Award, Download } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
@@ -181,9 +181,14 @@ const Experience = () => {
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-slate-700/30 text-center">
               <h3 className="text-white font-bold mb-3">Interested in my work?</h3>
               <p className="text-slate-400 text-sm mb-4">Download my complete resume for more details.</p>
-              <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1">
+              <a
+                href="/wisdom-kara-cv.docx"
+                download="Wisdom Kara Software Developer AI Trainer.docx"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <Download className="h-4 w-4" />
                 Download CV
-              </button>
+              </a>
             </div> 
           </div>
         </div>
