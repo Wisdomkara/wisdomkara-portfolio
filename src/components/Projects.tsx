@@ -15,6 +15,17 @@ import {
 const Projects = () => {
   const projects = [
     {
+      id: 7,
+      title: "Crea8",
+      category: "Creative Agency",
+      description: "Creative agency portfolio website featuring a modern design and comprehensive motion system.",
+      image: "/crea8-hero.png",
+      icon: <Sparkles className="h-8 w-8" />,
+      color: "from-blue-400 to-purple-600",
+      github: "https://github.com/Wisdomkara/Creative",
+      demo: "https://crea8-ten.vercel.app/",
+    },
+    {
       id: 1,
       title: "Healinton",
       category: "healthcare",
