@@ -6,14 +6,14 @@ import Contact from '@/components/Contact';
 import portrait from '@/assets/wiz.jpeg';
 import '@/portfolio.css';
 const projects = [
-    { title: 'Belfon', category: 'Website', type: 'Websites', image: 'belfon-logo.jpg', description: 'Explore the Belfon website.', url: 'https://belfon.com/' },
-    { title: 'Crea8', category: 'Creative agency', type: 'Websites', image: 'crea8-hero.png', description: 'An expressive digital home for a creative agency, with modern design and a considered motion system.', url: 'https://crea8-ten.vercel.app/', github: 'https://github.com/Wisdomkara/Creative' },
-    { title: 'Healinton', category: 'Healthcare', type: 'Web apps', image: 'healinton-logo.png', description: 'A healthcare platform connecting patient needs with clear, accessible service workflows.', url: 'https://healinton.com/', github: 'https://github.com/Wisdomkara/Healinton' },
     { title: 'Exploits Energy', category: 'Energy & industry', type: 'Websites', image: 'exploit-logo.png', description: 'A confident corporate presence that puts the company’s energy services front and center.', url: 'https://exploitsenergy.com/' },
-    { title: 'Kanel Innovations', category: 'Technology', type: 'Web apps', image: 'kanel-innovations-logo.jpg', description: 'A service and booking experience built for a technology-focused business.', url: 'https://kanelinnovations.vercel.app/' },
+    { title: 'Healinton', category: 'Healthcare', type: 'Web apps', image: 'healinton-logo.png', description: 'A healthcare platform connecting patient needs with clear, accessible service workflows.', url: 'https://healinton.com/', github: 'https://github.com/Wisdomkara/Healinton' },
     { title: 'Amaechi Homes', category: 'Real estate', type: 'Websites', image: 'homes.jpg', description: 'Property discovery and enquiries brought together in a practical WordPress experience.', url: 'https://amaechihomes.com/' },
+    { title: 'Kanel Innovations', category: 'Technology', type: 'Web apps', image: 'kanel-innovations-logo.jpg', description: 'A service and booking experience built for a technology-focused business.', url: 'https://kanelinnovations.vercel.app/' },
     { title: 'BokkuMart', category: 'Commerce', type: 'Web apps', image: 'bo.jpg', description: 'A React and TypeScript application with customer location tracking and Supabase integration.', url: 'https://bokku.vercel.app/', github: 'https://github.com/Wisdomkara/bokku' },
-    { title: 'Insightful Tutorial Academy', category: 'Education', type: 'Websites', image: 'insightful-tech-trybe-logo.jpeg', description: 'A welcoming home for learning programs from Insightful Tech Trybe.', url: 'https://insightful-tutorial-academy.vercel.app/' }
+    { title: 'Insightful Tutorial Academy', category: 'Education', type: 'Websites', image: 'insightful-tech-trybe-logo.jpeg', description: 'A welcoming home for learning programs from Insightful Tech Trybe.', url: 'https://insightful-tutorial-academy.vercel.app/' },
+    { title: 'Belfon', category: 'Website', type: 'Websites', image: 'belfon-logo.jpg', description: 'Explore the Belfon website.', url: 'https://belfon.com/' },
+    { title: 'Crea8', category: 'Creative agency', type: 'Websites', image: 'crea8-hero.png', description: 'An expressive digital home for a creative agency, with modern design and a considered motion system.', url: 'https://crea8-ten.vercel.app/', github: 'https://github.com/Wisdomkara/Creative' }
 ];
 export default function Index() {
     const [menuOpen, setMenuOpen] = useState(false);
