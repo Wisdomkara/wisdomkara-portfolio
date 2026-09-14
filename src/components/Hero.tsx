@@ -4,7 +4,7 @@ import myImage from "../assets/wiz.jpeg";
 import { gsap } from "gsap";
 
 const roles = [
-  "Front-end Developer",
+  "Software Developer",
   "React Specialist",
   "GoHighLevel Expert",
   "Digital Marketer",

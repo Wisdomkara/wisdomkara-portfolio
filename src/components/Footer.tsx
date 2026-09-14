@@ -35,8 +35,8 @@ const Footer = () => {
               <span className="text-2xl font-bold text-white">Wisdom Kara</span>
             </div>
             <p className="text-slate-400 mb-6 leading-relaxed">
-              Front-end Developer & Creative Technologist passionate about building 
-              exceptional digital experiences that make a difference. Turning ideas 
+              Software Developer & Creative Technologist passionate about building
+              exceptional digital experiences that make a difference. Turning ideas
               into reality through clean code and innovative design.
             </p>
             <div className="flex gap-4">
@@ -91,7 +91,7 @@ const Footer = () => {
               <Heart className="h-4 w-4 text-red-400" />
               <span>and lots of coffee</span>
             </div>
-            
+
             <div className="flex items-center gap-6">
               <a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">
                 Privacy Policy

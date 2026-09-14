@@ -5,11 +5,11 @@ import { Calendar, MapPin, Building, Award, Download } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Senior Front-end Developer',
+      title: 'Senior Software Developer',
       company: 'Kanel Technologies',
       location: 'Remote',
       period: '2022 - Present',
-      description: 'Leading front-end development initiatives, creating responsive web applications with React and modern JavaScript frameworks.',
+      description: 'Leading software development initiatives, creating responsive web applications with React and modern JavaScript frameworks.',
       achievements: [
         'Developed 20+ responsive web applications using React and TypeScript',
         'Improved application performance by 40% through optimization techniques',
@@ -19,7 +19,7 @@ const Experience = () => {
       color: 'from-blue-400 to-purple-600'
     },
     {
-      title: 'Front-end Developer',
+      title: 'Software Developer',
       company: 'Creative Digital Solutions',
       location: 'Hybrid',
       period: '2021 - 2022',
@@ -78,7 +78,7 @@ const Experience = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full mb-6"></div>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            A journey of continuous learning and growth in front-end development and creative technology.
+            A journey of continuous learning and growth in software development and creative technology.
           </p>
         </div>
 
@@ -93,13 +93,13 @@ const Experience = () => {
                   {index !== experiences.length - 1 && (
                     <div className="absolute left-6 top-16 w-0.5 h-full bg-gradient-to-b from-slate-600 to-transparent"></div>
                   )}
-                  
+
                   <div className="flex gap-6">
                     {/* Timeline Dot */}
                     <div className={`flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r ${exp.color} flex items-center justify-center`}>
                       <Building className="h-6 w-6 text-white" />
                     </div>
-                    
+
                     {/* Content */}
                     <div className="flex-1 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -109,7 +109,7 @@ const Experience = () => {
                           {exp.period}
                         </div>
                       </div>
-                      
+
                       <div className="flex items-center gap-4 mb-3 text-slate-300">
                         <span className="font-semibold">{exp.company}</span>
                         <div className="flex items-center gap-1 text-slate-400 text-sm">
@@ -117,9 +117,9 @@ const Experience = () => {
                           {exp.location}
                         </div>
                       </div>
-                      
+
                       <p className="text-slate-400 mb-4">{exp.description}</p>
-                      
+
                       <div className="space-y-2">
                         <h5 className="text-sm font-semibold text-slate-300">Key Achievements:</h5>
                         <ul className="space-y-1">
@@ -189,7 +189,7 @@ const Experience = () => {
                 <Download className="h-4 w-4" />
                 Download CV
               </a>
-            </div> 
+            </div>
           </div>
         </div>
       </div>
